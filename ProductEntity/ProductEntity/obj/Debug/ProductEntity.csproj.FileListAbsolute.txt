@@ -1,0 +1,13 @@
+C:\Users\User\Desktop\ProductEntity\ProductEntity\bin\Debug\ProductEntity.exe.config
+C:\Users\User\Desktop\ProductEntity\ProductEntity\bin\Debug\ProductEntity.exe
+C:\Users\User\Desktop\ProductEntity\ProductEntity\bin\Debug\ProductEntity.pdb
+C:\Users\User\Desktop\ProductEntity\ProductEntity\bin\Debug\EntityFramework.dll
+C:\Users\User\Desktop\ProductEntity\ProductEntity\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\ProductEntity\ProductEntity\bin\Debug\EntityFramework.xml
+C:\Users\User\Desktop\ProductEntity\ProductEntity\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\Desktop\ProductEntity\ProductEntity\obj\Debug\ProductEntity.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\ProductEntity\ProductEntity\obj\Debug\ProductEntity.exe
+C:\Users\User\Desktop\ProductEntity\ProductEntity\obj\Debug\ProductEntity.pdb
+C:\Users\User\Desktop\data-structures-C-\ProductEntity\ProductEntity\bin\Debug\ProductEntity.exe.config
+C:\Users\User\Desktop\data-structures-C-\ProductEntity\ProductEntity\obj\Debug\ProductEntity.exe
+C:\Users\User\Desktop\data-structures-C-\ProductEntity\ProductEntity\obj\Debug\ProductEntity.pdb
