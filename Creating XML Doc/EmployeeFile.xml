@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--Eemployee File-->
+<Employees>
+  <employee ID="1000">
+    <Name>Akal</Name>
+    <Gender>Male</Gender>
+    <Salery>100000000</Salery>
+  </employee>
+  <employee ID="1000">
+    <Name>Mena</Name>
+    <Gender>Female</Gender>
+    <Salery>1000000</Salery>
+  </employee>
+  <employee ID="1000">
+    <Name>Hana</Name>
+    <Gender>Female</Gender>
+    <Salery>1000000</Salery>
+  </employee>
+</Employees>
