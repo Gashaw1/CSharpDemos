@@ -9,7 +9,7 @@ namespace Creating_XML_Doc
 {
     public static class Employee
     {
-        static  XDocument xDcumment { get; set; }
+        static XDocument xDcumment { get; set; }
         public static void CreateXml()
         {
             xDcumment = new XDocument(
@@ -32,5 +32,6 @@ namespace Creating_XML_Doc
                 ));
             xDcumment.Save(@"C:\Users\User\Desktop\CSharpDemos\Creating XML Doc\Creating XML Doc\Data.xml");
         }
-    }
-}
+    }    
+} 
+ 
