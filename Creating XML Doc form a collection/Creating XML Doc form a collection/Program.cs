@@ -38,7 +38,8 @@ namespace Creating_XML_Doc_form_a_collection
             //where to save
             myXDocument.Save(@"C:\Users\User\Desktop\CSharpDemos\Creating XML Doc form a collection\Creating XML Doc form a collection\UserData.xml");
         }
-
+        //get data from xml document
+        public 
     }
     class Program
     {
