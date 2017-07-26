@@ -18,7 +18,7 @@ namespace IsAndAsOperatorsDemo
     }
     class Program
     {
-       
+
 
         static void Main(string[] args)
         {
@@ -29,12 +29,15 @@ namespace IsAndAsOperatorsDemo
             //this time return false because the base class can't be an object to the chld class
             bool IsPrent = parent is Child;
 
+            //return false
             castToObject(parent);
+
+            //return ture
             castToObject(child);
 
         }
         public static bool castToObject(object obj)
-        {            
+        {
             Child parent = obj as Child;
 
             if (parent != null)
@@ -44,7 +47,7 @@ namespace IsAndAsOperatorsDemo
             else
             {
                 return false;
-            }           
+            }
         }
     }
 }
