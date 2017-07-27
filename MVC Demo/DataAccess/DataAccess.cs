@@ -31,7 +31,7 @@ namespace DataAccessLayers
                 SqlCommand cmd = new SqlCommand("SP_ReturnUserByID", sqlConnection);
                 cmd.CommandType = CommandType.StoredProcedure;
                 SqlParameter param = new SqlParameter("@UserID", userID);
-
+                cmd.Parameters.Add(param);
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
                 dataAdapter.Fill(dataTable);
             }

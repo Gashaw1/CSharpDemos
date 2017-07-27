@@ -1,19 +1,20 @@
 ﻿using DataAccessLayers;
-
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
+using System.Web;
 
-namespace BusinessLayer
+namespace MVCPros.Models
 {
     public class Users : DataAccess
     {
-        protected int UserID { get; set; }
+        public int UserID { get; set; }
         public string UserName { get; set; }
-        protected string UserPassword { get; set; }
+        public string UserPassword { get; set; }
         public string UserEmail { get; set; }
-        protected Users user { get; set; }
-        protected List<Users> users { get; set; }
+        private Users user { get; set; }
+        private List<Users> users { get; set; }
 
         public Users()
         { }
@@ -21,6 +22,7 @@ namespace BusinessLayer
         {
             users = new List<Users>();
             user = new Users();
+
 
             foreach (DataRow row in user.ReturnData().Rows)
             {
@@ -35,7 +37,7 @@ namespace BusinessLayer
         //user login
         public Users ReturnUser(int id)
         {
-            user = new Users();         
+            user = new Users();
 
             foreach (DataRow row in user.ReturnData(id).Rows)
             {
@@ -43,10 +45,11 @@ namespace BusinessLayer
                 user.UserName = row["UserName"].ToString();
                 user.UserEmail = row["UserEmail"].ToString();
                 user.UserPassword = row["UserPassword"].ToString();
-                
+
             }
-           
+
             return user;
         }
     }
 }
+
