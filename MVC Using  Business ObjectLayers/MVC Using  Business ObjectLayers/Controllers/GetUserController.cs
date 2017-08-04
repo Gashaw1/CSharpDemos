@@ -19,7 +19,7 @@ namespace MVC_Using__Business_ObjectLayers.Controllers
             users = new List<Users>(user.ReturnUsers());
             return View(users.ToList());
         }
-        //retrun single user
+        //retrun single 
         public ActionResult Index2()
         {
             user = new Users();
