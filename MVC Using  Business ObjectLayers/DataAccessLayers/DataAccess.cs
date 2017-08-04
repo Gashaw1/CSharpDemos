@@ -1,16 +1,20 @@
-﻿using System.Configuration;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 
 namespace DataAccessLayers
 {
-    public class DataAccess
+    public static class DataAccess
     {
-        SqlConnection sqlConnection { get; set; }
-        DataTable dataTable { get; set; }
-        string conString = ConfigurationManager.ConnectionStrings["UsereDBContext"].ConnectionString;
+        static SqlConnection sqlConnection { get; set; }
+        static DataTable dataTable { get; set; }
+        static string conString = ConfigurationManager.ConnectionStrings["UsereDBContext"].ConnectionString;
         //return all user
-        protected DataTable ReturnData()
+        public static DataTable ReturnData()
         {
             dataTable = new DataTable();
             using (sqlConnection = new SqlConnection(conString))
@@ -23,7 +27,7 @@ namespace DataAccessLayers
             return dataTable;
         }
         //return user by id
-        public DataTable ReturnData(int userID)
+        public static DataTable ReturnData(int userID)
         {
             dataTable = new DataTable();
             using (sqlConnection = new SqlConnection(conString))
@@ -37,16 +41,5 @@ namespace DataAccessLayers
             }
             return dataTable;
         }
-        public void UpdateData(DataTable dt)
-        {
-
-            SqlDataAdapter da = new SqlDataAdapter();
-
-            DataSet ds = new DataSet();
-            ds.Tables.Add(dt);
-            SqlCommandBuilder builder = new SqlCommandBuilder(da);
-            da.Update(ds, "User");
-        }
-
     }
 }
