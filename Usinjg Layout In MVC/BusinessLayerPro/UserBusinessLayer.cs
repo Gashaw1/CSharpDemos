@@ -129,5 +129,18 @@ namespace BusinessLayerPro
                 return false;
             }
         }
+        //Delete user
+        public bool DeleteUser(int userId)
+        {
+            da = new DataAccess();
+            if (da.Delete(userId) == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

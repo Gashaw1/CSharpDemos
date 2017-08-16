@@ -207,5 +207,26 @@ namespace DataAccessLayerPro
 
             }
         }
+        //delete
+        public bool Delete(int id)
+        {
+            using (sqlConnection = new SqlConnection(conStr))
+            {
+                sqlConnection.Open();
+                cmd = new SqlCommand("SP_Delete_User", sqlConnection);
+                cmd.CommandType = CommandType.StoredProcedure;
+                param = new SqlParameter("@UserID", id);
+                cmd.Parameters.Add(param);
+                int rowAffect = cmd.ExecuteNonQuery();
+                if(rowAffect == 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }            
+        }
     }
 }

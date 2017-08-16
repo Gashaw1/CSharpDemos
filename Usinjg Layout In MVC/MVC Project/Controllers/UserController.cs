@@ -27,9 +27,17 @@ namespace MVC_Project.Controllers
             List<Users> users = user.GetUsers();
             return View(users.ToList());
         }
+        //to show detail
+        [HttpGet]
+        public ActionResult Details(Int32 id)
+        {
+            Users user = new Users();
+            user = user.GetUsers(id);
+            return View(user);
+        }
         //return the data to be update
         [HttpGet]
-        public ActionResult Edit(Int32 id)
+        public ActionResult Edit(int? d, Int32 id)
         {
             Users user = new Users();
             //retrun single from the collection 
@@ -49,8 +57,8 @@ namespace MVC_Project.Controllers
 
             if (upateResult == true)
             {
-              return RedirectToAction("Index");
-               // return View();
+                return RedirectToAction("Index");
+                // return View();
             }
             else
             {
@@ -78,7 +86,16 @@ namespace MVC_Project.Controllers
             //To redirect to the index view
             return RedirectToAction("Index");
         }
-       
+
+        //delete
+        public ActionResult Delete(int id)
+        {
+            Users user = new Users();
+            user.DeleteUser(id);
+            return RedirectToAction("Index");
+            
+        }
+            
 
     }
 }
