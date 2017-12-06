@@ -14,12 +14,12 @@ namespace Debug_Demo
         static void Main(string[] args)
         {
 
-            LinqDemo.sortResultDesDivEven();
+
             TestCast test = new TestCast();
             TestCast.DoWorkd(test);
 
             //Product pr = new Product();
-           var result =  Product.ValidatesRes();
+            var result = Product.ValidatesRes();
             CalculateInteres calcInterest = new CalculateInteres(1300.0M, 3, 44.0M);
 
             CalculateInteres.Calculate(2.22F);
@@ -47,9 +47,9 @@ namespace Debug_Demo
         {
             decimal interestAmount = calcInterest.loanAmount * calcInterest.lonRate * calcInterest.loanTerm;
 
-        #if DEBUG
+#if DEBUG
             LogLine("Intrest Amount : ", interestAmount.ToString("C"));
-        #endif
+#endif
             return interestAmount;
         }
         //this get execute only debug mode
@@ -88,7 +88,7 @@ namespace Debug_Demo
             {
                 return false;
             }
-           
+
         }
         //needs to return a multiple result
         public static ValidationResult Validateion()
@@ -150,12 +150,11 @@ namespace Debug_Demo
     }
     #endregion
 
-    #region casting
     public interface IDataContainer
     {
-        string  Data { get; set; }
+        string Data { get; set; }
     }
-    public class TestCast 
+    public class TestCast
     {
         public string Data
         {
@@ -179,31 +178,6 @@ namespace Debug_Demo
             }
         }
     }
-    #endregion
-
-    #region linq
-    public class LinqDemo
-    {
-        static decimal[] loanAmounts = { 303m, 44m, 66m, 2929m, 4m };
-
-        public static List <decimal> sortResultDesDivEven()
-        {
-            List<decimal> decimals = new List<decimal>();
-
-            IEnumerable<decimal> loanQuery =
-                from amount in loanAmounts
-                where amount % 2 == 0
-                orderby amount descending
-                select amount;
-
-            foreach (var am in loanQuery)
-            {
-                decimals.Add(am);
-            }
-            return decimals;
-        }
-    }
-    #endregion
-
-
 }
+ 
+
