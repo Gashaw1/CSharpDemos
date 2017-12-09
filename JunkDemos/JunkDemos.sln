@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JunkDemos", "JunkDemos\Junk
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{C888047D-8314-4601-B25C-86E3A53D6052}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Debug_Release_demo", "Debug_Release_demo\Debug_Release_demo.csproj", "{6D418AF0-44BB-4A39-92F4-23FE9092A762}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C888047D-8314-4601-B25C-86E3A53D6052}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C888047D-8314-4601-B25C-86E3A53D6052}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C888047D-8314-4601-B25C-86E3A53D6052}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D418AF0-44BB-4A39-92F4-23FE9092A762}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D418AF0-44BB-4A39-92F4-23FE9092A762}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D418AF0-44BB-4A39-92F4-23FE9092A762}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D418AF0-44BB-4A39-92F4-23FE9092A762}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
