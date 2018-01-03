@@ -13,10 +13,58 @@ namespace Debug_Release_demo
     {
         static void Main(string[] args)
         {
-            TestWebSites.ProcessWritle();
-            TestWebSites.TestWebsiteUrl("http://gashaw.somee.com/TestMvc/Home/Contact");
         }
     }
+    #region
+    interface IHome
+    {
+        void Start();
+    }
+    interface IOffice
+    {
+        void Start();
+    }
+    class UserStart : IOffice, IHome
+    {
+
+        //void IHome.Start()
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //void IOffice.Start()
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        public void rESULT()
+        {
+            var starter = new UserStart();
+            ((IHome)starter).Start();
+            
+            ((IOffice)starter).Start();
+        }
+
+        public void Start()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    
+    public class TheaterCustomer
+    {
+        public int custmerID { get; set; }
+        public string custmerName { get; set; }
+        public static Stack stack = new Stack();
+
+        public Stack customerstack(TheaterCustomer tobj)
+        {
+            stack.Push(tobj);
+            return stack;
+        }
+    }
+
     #region calc intrest
     public class CalcInterest
     {
@@ -85,6 +133,66 @@ namespace Debug_Release_demo
         }
     }
     #endregion
-    #region WriteFiles
+    class lists
+    {
+        public static void orderItems()
+        {
+            List<int> items = new List<int>()
+            {
+                100,
+                33,
+                4
+                ,555,
+                45,
+                80
+            };
+
+            //var reslt = from r in items
+            //            orderby r descending
+            //            where r > 80
+            //            select r;
+
+            //or 
+
+
+        }
+    }
+
+    abstract class BaseLogger
+    {
+        public virtual void Log(string message)
+        {
+            Console.WriteLine("Base : " + message);
+        }
+        public void LogCompleted()
+        {
+            Console.WriteLine("Completed");
+        }
+    }
+    class Logger : BaseLogger
+    {
+        public override void Log(string message)
+        {
+            Console.WriteLine(message);
+        }
+        public new void LogCompleted()
+        {
+            Console.WriteLine("finshed");
+        }
+
+    }
     #endregion
+
+    public class MachesNum
+    {
+        public static List<string> GetValidPhoneNumber(string input, string pattern)
+        {
+            var ValidNum = new List<string>();
+
+            var maches = regex.Matches(input);
+
+            return ValidNum;
+        }
+    }
 }
+
