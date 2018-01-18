@@ -21,8 +21,8 @@ namespace EncryptsDecryptsDemo
        
         private void btn_Encrypt_Click(object sender, EventArgs e)
         {
-            txt_Salt.Text = EncryptDecrypt.CreateSalt(4);
-
+          //  txt_Salt.Text = EncryptDecrypt.CreateSalt(10);
+            txt_Salt.Text = "0HhQSCFyYBAF9Q==";
             txt_Encrypted.Text = EncryptDecrypt.Do_Encrypt(txt_UserInput.Text, txt_Salt.Text);
 
         }
